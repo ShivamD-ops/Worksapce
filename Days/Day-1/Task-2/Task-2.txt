@@ -1,0 +1,21 @@
+HTTPS is HTTP with encryption and verification. 
+The only difference between the two protocols is that HTTPS uses TLS (SSL) to encrypt normal HTTP requests and responses, 
+and to digitally sign those requests and responses. As a result, HTTPS is far more secure than HTTP. 
+A website that uses HTTP has http:// in its URL, while a website that uses HTTPS has https://.
+
+ HTTPS is more secure than HTTP because it uses encryption to protect information as it is being sent 
+between clients and servers. When an organization enables HTTPS, any information you transmit, 
+like passwords or credit card numbers, will be difficult for anyone to intercept.
+
+The Purpose of SSL/TLS Certificates->
+SSL/TLS certificates serve three primary functions: encryption, authentication, and trust.
+
+1) Encryption ensures that all data passed between the web server and browsers remains private and integral. 
+This is crucial for protecting sensitive information like login credentials, credit card details, and personal 
+data from interception.
+
+2) Authentication verifies that your website is who it claims to be, preventing impersonation attempts. 
+This involves validating your domain ownership and, in some cases, your organization’s identity.
+
+3) Trust is fostered with website visitors by showing them you value their privacy and security. 
+Visible indicators like the padlock icon and HTTPS in the URL reassure users that their connection is secure.

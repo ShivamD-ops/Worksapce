@@ -1,0 +1,83 @@
+Task-1->
+Phases of SDLC:
+o Requirement Gathering: Define the requirements
+with bussiness team
+o System Design: HLD LLD and DB design
+o Implementation: Code
+o Testing: Write Unit Tests.
+o Deployment: Deploy the system to a production environment.
+o Maintenance: Fix bugs and implement updates based on user feedback
+
+After coding, the software goes through rigorous testing to identify and fix bugs, check performance, and ensure it meets the specified requirements.
+Testing is critical to ensure that the software is reliable, functional, and meets user expectations. There are various types of testing, each focusing on a different aspect of the software. Types of Testing: 
+1.	Unit Testing This is the first line of defense, where individual components or functions of the software are tested in isolation to ensure they work as intended. Unit tests are typically automated.
+2.	Integration Testing After unit testing, integration testing checks how different components of the system work together. It ensures that interactions between modules perform as expected.
+3.	System Testing System testing verifies that the entire system works as intended when all components are integrated. It covers functionality, performance, security, and other system-wide aspects.
+4.	Performance Testing This testing evaluates how the software performs under different conditions, such as varying loads and stresses. It includes load testing, stress testing, and scalability testing. 
+5.	Security Testing This testing identifies vulnerabilities in the software and ensures that sensitive data (e.g., passwords, payment details) is protected from unauthorized access.
+
+Task-2->
+1) Feature Breakdown -> Homepage UI, Login Logout, Add Task DElete Task.
+2) Sprint 1-> Login Logout Feature Complete
+   Sprint 2-> Add Delete Task Feature
+   Sprint 3-> Hompage UI
+Agile is a set of principles for software development under which requirements and solutions evolve through collaboration between self-organizing teams. It advocates for flexible planning, iterative development, and continuous improvement. Key Principles: 
+• Customer Collaboration Over Contract Negotiation 
+• Responding to Change Over Following a Plan 
+• Working Software Over Comprehensive Documentation 
+• Individuals and Interactions Over Processes and Tools
+
+Task-3->
+1) a function that calculates the total
+price of items in a shopping cart
+
+2) 
+for i in range(30):
+	addInCart(item)
+noOfItemsInCart(obj Cart) should return 30
+
+def noOfItemsInCart(obj Cart):
+	res = 0
+	for i in Cart.items:
+		res = res + 1
+	return res
+
+Test-driven development can improve code quality, maintainability, and efficiency, resulting in code that meets the conditions, is simple to test, and is less prone to errors. 
+TDD also provides a faster feedback loop, allowing developers to identify and remove stumbling blocks early in development. TDD integrates with Agile concepts to improve software development and provide higher-quality solutions. 
+
+Task-4->
+Test Case 1: validateUserInput("valid_input") should return True.
+Test Case 2: validateUserInput("") should return False (empty input).
+Test Case 3: : validateUserInput("1234") should return False (numeric input not allowed).
+Unit testing is a crucial part of software development as it helps catch defects early in the process, reduce costs, improve code quality, and facilitate refactoring.
+Failing to write Unit test can affect->
+Early Detection of issues
+Code Quality
+Development speed
+Safety of changing code
+
+Task-5->
+CI help in countinuesly integrating the features on the production giving deliverables to the client.
+CI ensures fast deployment and provide countinues feedback
+
+Task-6->
+Integration Testing will help to verify the connection between two or more modules while Unit Testing is a testing method by which individual units of code are tested.
+Issues found in Unit Testing can be instantly fixed but issues found in Integration Testing take a longer time and the cost to fix is higher, as it becomes difficult to find where exactly a bug has arisen.
+Unit Testing is a kind of white box testing, whereas Integration Testing is a kind of black-box testing.
+
+Task-7->
+SRP allows code to be maintainable as it has principle of one job per function.
+this makes code modular as it allows chnges to be made easier and bugs to be tracked easily
+
+Task-8->
+Design Phase is most chalenging phase as it sets the expectations for all the follwing states as SDLC ages.
+it need to cater various chalenges like Scalable and correct expectation from the SRS Document
+
+Task-9->
+UAT involves the feedback from users on functional working software whereas other testing secinarios focus more on the check if a feature implemented is functional or not.
+
+Task-10->
+Retrospective help in acheiving agility, it is the 12th principle of agile practice.
+Help understand the areas of improvement and acheive more in next sprint cycle. 
+
+

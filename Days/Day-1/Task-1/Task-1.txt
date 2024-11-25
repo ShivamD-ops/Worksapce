@@ -1,0 +1,21 @@
+DNS servers translate the website domain names users search in web browsers into corresponding numerical IP addresses. 
+This process is known as DNS resolution. 
+
+The Domain Name System (DNS) allows users to access websites using domain names and URLs 
+rather than complex numerical internet protocol (IP) addresses.
+
+The host requests the DNS name server to resolve the domain name. 
+And the name server returns the IP address corresponding to that domain 
+name to the host so that the host can future connect to that IP address.
+
+
+
+The working of DNS starts with converting a hostname into an IP Address. 
+A domain name serves as a distinctive identification for a website. 
+It is used in place of an IP address to make it simpler for consumers to visit websites. 
+Domain Name System works by executing the database whose work is to store the name of hosts 
+which are available on the Internet. 
+The top-level domain server stores address information for top-level domains such as .com and .net, .org, and so on. 
+If the Client sends the request, then the DNS resolver sends a request to DNS Server to fetch the IP Address. 
+In case, when it does not contain that particular IP Address with a hostname, it forwards the request to another DNS Server. 
+When IP Address has arrived at the resolver, it completes the request over Internet Protocol .

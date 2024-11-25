@@ -1,0 +1,22 @@
+Web API vs REST API: 4 Key Differences:
+Here are the key differences between Web API and REST API:
+
+1. Protocol:
+With the Web API, you can communicate with clients through either the HTTP or HTTPS protocol.  All communication in the REST API, however, is only supported through HTTP. This means that you can't use the REST API to reach clients through HTTPS.
+
+?
+
+2. Formats:
+Web API can automatically convert request and response data into various formats, including JSON, XML, BSON, and url-encoded data. This makes it easy to work with data in the format that is most convenient for you. On the other hand, the REST API only supports the JSON data format and is, therefore, less flexible.
+
+?
+
+3. Design:
+When it comes to design, the Web API is much more flexible than the REST API. This is because the Web API uses a model-view-controller (MVC) architecture that allows for a better separation of concerns. The REST API, on the other hand, relies on a resources approach which can make it more difficult to maintain and test.
+
+?
+
+4. Support:
+Both Web API and REST API  can be hosted on IIS as long as the IIS server supports XML requests. REST API has to follow standardized XML requests, while Web API does not have this requirement. Besides  IIS, Web API can also be hosted on other web servers that support XML and JSON requests.
+
+?HTTP methods such as GET, POST, PUT, PATCH, and DELETE are used in RESTful API development

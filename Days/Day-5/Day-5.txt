@@ -1,0 +1,274 @@
+Task-1->
+Injection
+Broken Authentication
+Sensitive Data Exposure
+XML External Entities (XEE)
+Broken Access Control
+Security Misconfiguration
+Cross-Site Scripting
+Insecure Deserialization
+Using Components With Known Vulnerabilities
+Insufficient Logging And Monitoring
+
+Injection -> Injection attacks happen when untrusted data is sent to a code interpreter through a form input or some other data submission to a web application.
+
+Broken Authentication -> Vulnerabilities in authentication (login) systems can give attackers access to user accounts and even the ability to compromise an entire system using an admin account.
+
+Sensitive Data Exposure -> If web applications don�t protect sensitive data such as financial information and passwords, attackers can gain access to that data and sellor utilize it for nefarious purposes. 
+
+Examples
+
+Injection -> an attacker could enter SQL database code into a form that expects a plaintext username. If that form input is not properly secured, this would result in that SQL code being executed. 
+
+Broken Authentication -> an attacker can take a list containing thousands of known username/password combinations obtained during a data breach and use a script to try all those combinations on a login system to see if there are any that work.
+
+Sensitive Data Exposure ->  If web applications don�t protect sensitive data such as financial information and passwords, attackers can gain access to that data and sellor utilize it for nefarious purposes. 
+
+
+Task-2->
+While SSL is now outdated, its successor TLS provides stronger encryption and
+security mechanisms, making TLS the standard for secure communication on the
+web today.
+client sends syn
+server sends ACk for sync
+client hello
+server hello crtificate server hello done
+client key exchange (sym key)
+connection established
+A TLS handshake is the process that kicks off a communication session that uses TLS. During a TLS handshake, the two communicating sides exchange messages to acknowledge each other, verify each other, establish the cryptographic algorithms they will use, and agree on session keys. 
+
+Common Name (CN)	www.cloudflare.com
+Organization (O)	<Not Part Of Certificate>
+Organizational Unit (OU)	<Not Part Of Certificate>
+Common Name (CN)	WE1
+Organization (O)	Google Trust Services
+Organizational Unit (OU)	<Not Part Of Certificate>
+Issued On	Sunday, November 3, 2024 at 10:40:21 PM
+Expires On	Saturday, February 1, 2025 at 11:40:17 PM
+Certificate	5a1879dd3077b151e696e2ba6dd69fe277eb2ebed682d2001ea205db94a109fa
+Public Key	ee4b64608f6870f532de5adb21732b5e203c342c20db8927486ca37c4b4fecdf
+
+SSL (Secure Socket Layer) is less secured as compared to TLS(Transport Layer Security).	
+TLS (Transport Layer Security) provides high security.
+
+SSL is less reliable and slower.	
+TLS is highly reliable and upgraded. It provides less latency.
+
+SSL has been depreciated.	
+TLS is still widely used.
+
+SSL uses port to set up explicit connection.	
+TLS uses protocol to set up implicit connection.
+
+Task-3->
+authentication refers to verify user who he claims to be.
+autherization refers to verify user can access a pericular information or not.
+
+authentication is required when we need to login a socialmedia website.
+root privledge is required when we need to install new application in linux
+
+when we login we use authentication
+after successfull login we get session or a token
+then we use this token or session id to autherize access to protected end points
+
+if a user can log in but cannot access certain resources, authorization is responsible
+
+Task-4->
+2)
+use ctrl shift i 
+open inspect mode
+toggle to application tab
+find cookie in storage heading
+
+3)
+The Secure attribute tells the browser to only send the cookie if the request is being sent over a secure channel such as HTTPS.
+The HttpOnly attribute is used to help prevent attacks such as session leakage, since it does not allow the cookie to be accessed via a client-side script such as JavaScript.
+The Domain attribute is used to compare the cookie’s domain against the domain of the server for which the HTTP request is being made. 
+The Path attribute plays a major role in setting the scope of the cookies in conjunction with the domain.
+The Expires attribute is used to:
+set persistent cookies
+limit lifespan if a session lives for too long
+remove a cookie forcefully by setting it to a past date
+
+Ques-ans-> 
+Persistent cookies are stored on a user's device and can be used to store information that can be accessed across multiple browsing sessions.
+
+Task-5->
+The JWT authorization workflow is as follows:
+1.The end user logs in, the client application sends an authentication request to API Gateway or to any third-party JWT issuer, to obtain a JWT token.
+2.If API Gateway is the JWT issuer, then it validates the user or the application. If the user or application credentials are valid, API Gateway generates the JSON token using a private key that was specified in the JWT configuration, and sends the generated token to the client.
+If the user credentials are invalid, API Gateway returns a specific error response.
+3.Client sends the generated JSON token in the HTTP Authorization request header as a Bearer token to access the protected API in API Gateway.
+4.API Gateway first identifies the application based on claims from the JWT, then validates the JWT using the public certificate of the issuer (the issuer can be API Gateway or a third-party issuer) and provides access to the protected resources.
+If the validation fails, API Gateway returns a specific error response.
+
+Login to javainuse.com/jwtgenerator
+enter payload
+select algorithm
+enter key
+click on create JWT
+
+Task-6->
+NSGs are used in cloud platforms (like AWS, Azure) to control inbound and
+outbound traffic to resources. They consist of rules that define which types of
+network traffic are allowed or denied, providing a firewall-like function for cloud
+resources
+
+Open the navigation menu, click Networking, and then click Virtual cloud networks.
+Click the name of the VCN you're interested in.
+Under Resources, click Network Security Groups.
+Click Create Network Security Group.
+On the Basic Info page, enter the following information:
+Name: A descriptive name for the NSG. The name doesn't have to be unique, and you can change it later. Avoid entering confidential information.
+Create In Compartment: The compartment where you want to create the NSG, if different from the compartment you're currently working in.
+Show advanced options: You can apply tags to your resources to help you organize them according to your business needs. You can apply tags at the time you create a resource, or you can update the resource later with tags. For general information about applying tags, see Resource Tags.
+Click Next.
+If you want to create the NSG without any rules yet, click Create and you're done. Otherwise proceed to the next step.
+For the first security rule, enter the following information (for examples of rules, see Networking Scenarios):
+Stateful or stateless: If a rule is stateful, connection tracking is used for traffic matching the rule. If a rule is stateless, no connection tracking is used. By default, rules are stateful unless you specify otherwise. See Stateful Versus Stateless Rules.
+Direction (ingress or egress): Ingress is inbound traffic to the VNIC, and egress is outbound traffic from the VNIC.
+Source Type and Source (for ingress rules only): Following are the allowed source types and the source values that you can specify for them:
+
+CIDR: The CIDR block that the traffic originates from. Use 0.0.0.0/0 to indicate all IP addresses. The prefix is required (for example, include the /32 if you're specifying an individual IP address).
+Service: Only for packets coming from an Oracle service through a service gateway. The source service is the service CIDR label that you're interested in.
+Network Security Group: An NSG that is in the same VCN as this rule's NSG.
+Destination Type and Destination (for egress rules only): Following are the allowed destination types and the destination values that you can specify for them:
+
+CIDR: The CIDR block that the traffic goes to. Use 0.0.0.0/0 to indicate all IP addresses. The prefix is required (for example, include the /32 if you're specifying an individual IP address).
+Service: Only for packets going to an Oracle service through a service gateway. The destination service is the service CIDR label that you're interested in.
+Network Security Group: An NSG that is in the same VCN as this rule's NSG.
+IP Protocol: Either a single IPv4 protocol (for example, TCP or ICMP) or "all" to cover all protocols.
+Source Port Range: The port that the traffic originates from. For TCP or UDP, you can specify all source ports, or optionally specify a single source port number, or a range.
+Destination Port Range: The port that the traffic goes to. For TCP or UDP, you can specify all destination ports, or optionally specify a single destination port number, or a range.
+ICMP Type and Code: For ICMP, you can specify all types and codes, or optionally specify a single ICMP type with an optional code. If the type has multiple codes, create a separate rule for each code that you want to allow.
+Description: Enter an optional description of the rule.
+To add another security rule, click + Another Rule and enter the rule's information. Repeat for each rule that you want to add.
+When you're done, click Create.
+
+The security group acts as a virtual firewall. The only traffic that reaches the instance is the traffic allowed by the security group rules. For example, if the security group contains a rule that allows ICMP traffic to the instance from your network, then you could ping the instance from your computer.
+
+Task-7->
+
+A WAF is a specialized firewall that monitors and filters HTTP/HTTPS traffic
+between a web application and the internet. It’s designed to protect applications
+from common threats like SQL injection, XSS, and DDoS attacks.
+o WAFs are often cloud-based and integrate with cloud providers like AWS (AWS
+WAF) or Microsoft Azure (Azure WAF).
+
+By inspecting each request individually and analyzing the contents of the query, a web application firewall can detect the SQL injection payload and block the request. WAF also analyzes the query and looks for keywords commonly used in SQL injection attacks, such as OR, UNION, SELECT, and DROP.
+
+A network firewall and a web application firewall (WAF) are both security solutions that help protect against cyberattacks, although they differ in the way they work, the internet layer and protocols they monitor and the types of attacks they are designed to protect against. WAFs secure web traffic by filtering and monitoring HTTP traffic (OSI layer 7) between web applications and end-users. They employ a different set of security policies to detect and prevent attacks such as injection, cross-site scripting, server-side request forgeries, and other web application attacks. In contrast, network firewalls monitor and control Network and Transport layers traffic (OSI Layers 3 and 4) based on pre-defined security policies to ensure unauthorized traffic is denied entry.
+
+Task-8->
+
+Symmetric Key Encryption	
+Asymmetric Key Encryption
+
+It only requires a single key for both encryption and decryption.	
+It requires two keys, a public key and a private key, one to encrypt and the other to decrypt.
+
+The size of ciphertext is the same or smaller than the original plaintext.	
+The size of ciphertext is the same or larger than the original plaintext.
+
+The encryption process is very fast.	
+The encryption process is slow.
+
+It is used when a large amount of data needs to be transferred.	
+It is used to transfer small amount of data.
+
+It only provides confidentiality.	
+It provides confidentiality, authenticity, and non-repudiation.
+
+The length of key used is 128 or 256 bits	
+The  length of key used is 2048 or higher
+
+In symmetric key encryption, resource utilization is low compared to asymmetric key encryption.	
+In asymmetric key encryption, resource utilization is high.
+
+It is efficient as it is used for handling large amount of data.	
+It is comparatively less efficient as it can handle a small amount of data.
+
+Security is lower as only one key is used for both encryption and decryption purposes.	
+Security is higher as two keys are used, one for encryption and the other for decryption.
+
+The Mathematical Representation is as follows-
+P = D (K, E(K, P))
+
+where K –> encryption and decryption key
+P –> plain text
+D –> Decryption 
+E(K, P) –> Encryption of plain text using K
+
+The Mathematical Representation is as follows-
+P = D(Kd, E (Ke,P))
+where Ke –> encryption key
+
+Kd –> decryption key
+D –> Decryption
+E(Ke, P) –> Encryption of plain text using encryption key Ke. P –> plain text
+
+Examples: 3DES, AES, DES and RC4	
+Examples: Diffie-Hellman, ECC, El Gamal, DSA and RSA
+
+Encryption at Rest refers to the encryption applied to the stored data. Encryption may be implemented at the source, where data is generated and stored at the origin. Encryption in Transit refers to encrypting data that is transferred between two nodes of the network.
+
+
+Step 1: Generate key pairs
+Step 2: Extract the public keys
+Step 3: Exchange public keys
+Step 4: Exchange encrypted messages with a public key
+Step 5: Decrypt the file using a private key
+Step 6: Repeat the process with the other key
+
+Encryption at rest protects data from unauthorized access in case of theft, loss, or physical damage to the storage device. Encryption in transit protects data from interception, eavesdropping, and tampering during transmission over a network.
+
+Task-9->
+
+An IAM role is an IAM identity that you can create in your account that has specific permissions. 
+Roles provide temporary access to resources and aren’t associated with specific users. Instead, roles enable principals to temporarily assume a set of permissions to complete an operation
+To manage access on AWS we generate IAM policies that define levels of permissions and attach them to IAM identities(users, groups, roles) or AWS resources.
+
+Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
+
+In the navigation pane on the left, choose Policies.
+
+Choose Create policy.
+
+In the Policy editor section, choose the JSON option.
+
+Type or paste a JSON policy document. For details about the IAM policy language, see IAM JSON policy reference.
+
+Resolve any security warnings, errors, or general warnings generated during policy validation, and then choose Next.
+
+When you are finished adding permissions to the policy, choose Next.
+
+On the Review and create page, type a Policy Name and a Description (optional) for the policy that you are creating. Review Permissions defined in this policy to see the permissions that are granted by your policy.
+
+(Optional) Add metadata to the policy by attaching tags as key-value pairs. For more information about using tags in IAM, see Tags for AWS Identity and Access Management resources.
+
+Choose Create policy to save your new policy.
+
+The “Principle of Least Privilege” (POLP) states a given user account should have the exact access rights necessary to execute their role's responsibilities—no more, no less. POLP is a fundamental concept within identity and access management (IAM).
+
+TAsk-10->
+ install ZAP on the system
+
+run a Quick Start Automated Scan :
+
+Start ZAP and click the Quick Start tab of the Workspace Window.
+Click the large Automated Scan button.
+In the URL to attack text box, enter the full URL of the web application you want to attack.
+Click the Attack
+
+ A widely used open-source tool for finding security vulnerabilities in web
+applications. ZAP automates security testing for websites, including testing for
+common security flaws like cross-site scripting (XSS), SQL injection, and
+misconfigurations.
+
+
+
+
+
+
+
+

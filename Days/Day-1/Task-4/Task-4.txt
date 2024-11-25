@@ -1,0 +1,10 @@
+Subnetting improves security by enabling network segmentation,network traffic isolation, 
+and facilitating more granular access controls.
+Subnetting means dividing a large network into many smaller subnetworks. 
+
+Subnetting can improve security in multiple ways. Some of the ways are as given below:
+
+1) Dividing the whole network into subnets helps in managing the incoming traffic because now we can individually monitor the traffic of specific subnets and can stop any type of potential threats.
+2) We can allow any specific people to enter into the specific part of the subnet. By this, we can block our precious information from the entire world and allow only trusted people.
+3) It is possible that the whole network doesn't contain the important things. There may be the case that some subnetworks contain very important things and other subnetworks contain not so important things. Now giving the same high security to the whole network was not possible. Now because of subnetting, we can give high security to those networks that contain the important things.
+4) Earlier any attack like DDOS disturbs the whole network. Now because of subnetting it can disturb one subnetwork at a time. when any one subnetwork would be disturbed then we can give alert to other subnetworks about the potential attack.

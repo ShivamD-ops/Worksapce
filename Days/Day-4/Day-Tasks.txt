@@ -1,0 +1,137 @@
+Task-1
+1) create a repository on github
+2) add a readme file
+3) copy the url of repo
+4) go to desired folder
+5) open the folder with vs code
+6) open integrated terminal in vs code
+7) type git clone <repositary url>
+8) open the readme file in local computer
+9) on integrated terminal type git add readme.md
+10) git commit -m "<commit message>"
+11) git push
+
+on git commit -m "message" the all changes in the staging area are applied to the local repositary and is now updated.
+commit message helps to identify the the changes made in the perticular commit and help others know on the vcs also working on same branch the changes in different revisions.
+
+Task-2
+1) in git repo terminal type- git checkout -b <branch_name>
+2) now edit readme file in the new branch 
+3) git add .
+4) git commit -m "changes in branch"
+5) git push
+6) git checkout main
+7) git merge <branch_name>
+8) git push origin master
+Git merge preserves the commit history .
+
+Task-3->
+1) in git repo terminal type- git checkout -b <branch_name>
+2) now edit readme file in the new branch 
+3) git add .
+4) git commit -m "changes in branch"
+5) git push
+6) git rebase main
+git merge combines the branches, preserving both histories. In contrast, git
+rebase rewrites commit history, making it appear as though the changes were
+applied directly on top of the target branch, resulting in a cleaner, linear history
+
+Task-4->
+1) modify in a new branch
+2) git stash
+3) git checkout main
+4) git checkout branch_name
+5) observe changes available
+Git stash saves changes temporarily allowing to switch b/w branches
+
+Task-5->
+1) create .gitlab-ci.yml file
+2) git add .
+3) git commit -m "added Gitlab Ci yml"
+4) git push
+5) see gitlab piplines
+ via -> CI/CD > Pipelines
+.yml file define
+1) structure and order of jobs that runer should execute
+2) the desicions the runner should make when specific conditions are encountered.
+
+Task-6->
+1) install jenkins
+2) create new jenkins pipeline job
+ CI is the practice of continuously integrating code changes into a shared
+repository. Each integration is verified by an automated build and tests to catch bugs
+early.
+ Continuous Delivery is an extension of CI where the code is automatically
+prepared for a release to production. It ensures that the application is always in a
+deployable state.
+
+Task-7->
+
+Setting Up Nginx as a Reverse Proxy
+o Nginx can be configured to forward requests from the client to backend servers.
+o Example configuration:
+server {
+ listen 80;
+ server_name example.com;
+ location / {
+ proxy_pass http://backend-server:8080;
+ proxy_set_header Host $host;
+ proxy_set_header X-Real-IP $remote_addr;
+ proxy_set_header X-Forwarded-For
+$proxy_add_x_forwarded_for;
+ }
+}
+Proxy pass farwards requests to the backend server.
+A proxy_pass is usually used when there is an nginx instance that handles many things, and delegates some of those requests to other servers.
+
+Task-8->
+Nginx can distribute traffic to multiple backend servers for load balancing,
+ensuring high availability.
+o Example configuration for load balancing:
+upstream backend {
+ server backend1.example.com;
+ server backend2.example.com;
+}
+server {
+ location / {
+ proxy_pass http://backend;
+ }
+}
+Nginx uses round-robin by default for load balancing, distributing traffic evenly
+across multiple backend servers. You can also configure other algorithms like IP
+hash or least_conn.
+
+Task-9->
+Setting Up Apache as a Reverse Proxy
+o Apache uses mod_proxy and mod_proxy_http to forward requests to backend
+servers.
+o Example configuration for reverse proxy:
+<VirtualHost *:80>
+ ServerName example.com
+ ProxyPass / http://backend-server:8080/
+ ProxyPassReverse / http://backend-server:8080/
+</VirtualHost>
+
+Apache uses ProxyPass and ProxyPassReverse to forward client requests to a
+backend server
+
+Task-10->
+1) create a python application
+2) docker build -t myapp
+3) explore enkins to set up pipeline
+
+Docker containers provide a consistent environment for application deployment.
+Jenkins automates building and deploying the Docker container, ensuring the
+latest changes are deployed efficiently to the production server.
+
+
+
+
+
+
+
+
+
+
+
+

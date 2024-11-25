@@ -1,0 +1,12 @@
+For Routers Supporting VLANs:
+
+
+Access Your Router’s Admin Interface: You should now have access to your router’s webpage given its Internet Protocol address.
+Enable VLAN Support: First of all, go to the VLAN settings. This may be categorized under the Advanced Settings carrying the title; Network or TCP/IP Routing in the router.
+Create VLANs: In this setup, VLANs should be defined for each of the network segments described above.
+Assign Ports or SSIDs to VLANs: Allocate specific router ports or Wireless networks to every VLAN. Confirm that each VLAN does not connect with the others.
+For Routers Without Native VLAN Support:
+
+To enable VLANs, consider flashing your routers firmware using 3rd party firmware like DD-WRT or OpenWrt, which supports VLAN
+
+VLANs keep traffic from different networks separated when traversing shared links and devices within a topology. This process, also known as VLAN tagging, is invaluable to limiting broadcast network traffic and securing network segments.

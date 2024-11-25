@@ -1,0 +1,27 @@
+1)
+import threading
+import time
+def print_num():
+    for i in range(10):
+        print(i)
+        time.sleep(1)
+
+def print_alpha():
+for i in 'abcdefgh'
+    print(i)
+    time.sleep(1)
+
+thread1 = threading.Thread(target=print_num)
+thread2 = threading.Thread(target=print_alpha)
+
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+
+2)
+use ps to get PID
+open terminal and run->
+top -d -p $PID
+htop -d 1 -p $PID

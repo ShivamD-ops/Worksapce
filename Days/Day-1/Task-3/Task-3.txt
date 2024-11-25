@@ -1,0 +1,13 @@
+IPv4 has a 32-bit address
+IPv6 has a 128-bit address
+
+IPv4 Supports Manual and DHCP address configuration
+IPv6 Supports Auto and Renumbering address configuration
+
+IPv4 integrity is unacheivable
+IPv6 integrity is acheivable
+
+IPv4 has limited number of IP address
+Ipv6 has large number of IP address
+
+The main reason IPv6 was developed was to provide a solution for the eventual exhaustion of addresses in IPv4.

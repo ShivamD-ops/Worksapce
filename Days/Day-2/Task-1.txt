@@ -1,0 +1,29 @@
+1) 
+import time
+print("Hello World")
+time.sleep(300)
+
+2)
+run main.py file
+run below comands
+ps -a
+
+3)
+run a python file
+run below comands to see process states
+ps -a | grep "R" (in Running state)
+ps -a | grep "S" (in sleep)
+ps -aus (all process with state info)
+
+4)
+create process with different sleep timers to see this
+
+Ques-> How does the operating system decide which process gets CPU time? What
+role does the process scheduler play in this?
+
+A scheduling method is used to decide which job will be dispatched for execution.
+
+Process schedulers are fundamental components of operating systems responsible for deciding the order in which processes are executed by the CPU. 
+In simpler terms, they manage how the CPU allocates its time among multiple tasks or processes that are competing for its attention. 
+Process scheduling is the activity of the process manager that handles the removal of the running process from the CPU and the selection of another process based on a particular strategy.
+can use Round Robin, SJF(preemtive, non preemtive) etc

@@ -1,0 +1,11 @@
+Opposed to OAuth, Basic Authentication is a more straightforward, yet less secure method embedded within the HTTP framework. It involves transmitting a username and password with every request, often encoded in Base64. This method, while simple, risks exposing user credentials more openly.
+
+FEATURE	        OAUTH	                                        BASIC AUTHENTICATION
+Security Level	High, indirect exposure of credentials.	        Lower, credentials are sent with each request.
+User Control	Extensive, with scope and time limitations.	Minimal, full credential access is provided.
+Complexity	Higher, due to token management.	        Lower, straightforward credential encoding.
+Ideal Usage	Suited for services requiring secure, delegated access.	Best for basic, direct authentication needs.
+
+
+
+JWTs are self-contained and carry all the necessary information, which eliminates the need for a server-side session store. Scalability: Being stateless, JWTs are easily scalable across multiple servers as there's no need to share session data.

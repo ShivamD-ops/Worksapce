@@ -1,0 +1,11 @@
+ DHCP automatically assigns IP
+addresses to devices on a network. Without DHCP, network administrators would have to
+manually configure each device's IP address, which can be time-consuming and errorprone
+
+Message	        Detail
+Discover	This is message sent by DHCP client to discover a DHCP server.
+Offer	        Sent by DHCP server to lease unique IP address and other parameters needed to client.
+Request	        Sent by DHCP client asking server to lease parameters listed in Offer message.
+Acknowledgement	Sent by DHCP server to assign IP address, mask, default router & DNS server address to client.
+
+
