@@ -3,6 +3,7 @@ while i <= 10 :
     print(i)
     i += 1
 #2
+print("Even Numbers.......")
 i = 2
 while i <= 10 :
     print(i)

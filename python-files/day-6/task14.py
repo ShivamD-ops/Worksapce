@@ -3,13 +3,13 @@ dict1 = {
     "Age" : 23,
     "location": "Gurugram"
 }
-print(dict1)
+print("initial dictionary",dict1)
 dict1["job"] = "FrontEnd Devloper"
-print(dict1)
+print("added new key <Job> ",dict1)
 dict1["age"] = 22
-print(dict1)
+print("updated age to 22 -> ",dict1)
 del dict1["location"]
-print(dict1)
+print("deleted location key -> ",dict1)
 
 # print(dict1["location"])
 # If we try to access a key which is not present in the dictionary 
