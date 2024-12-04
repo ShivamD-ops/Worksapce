@@ -8,7 +8,8 @@ greet('Jhon Doe')
 
 # Closures ------>--------
 # Nested function help us access
-# the outer function variables even after
+# the outer function variables even after fun call is over
+
 # 
 def greet():
     name = "Jhon"
