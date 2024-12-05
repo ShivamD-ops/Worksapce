@@ -1,5 +1,5 @@
 """
-URL configuration for DjangoRestApi project.
+URL configuration for TaskManagerREST project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -19,6 +19,6 @@ from django.urls import path,re_path
 from django.conf.urls import include
 
 urlpatterns = [
-    re_path('admin/', admin.site.urls),
-    re_path(r'^',include('users.urls'))
+    path('admin/', admin.site.urls),
+    re_path(r'^',include('tasks.urls'))
 ]
