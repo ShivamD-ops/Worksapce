@@ -1,3 +1,22 @@
+
+'''
+Created by -> Shivam Devaser
+on - > 5-12-2024
+
+created views () ->
+Task_list->
+get,post
+(get all tasks from Task.objects and send json response after passing from serializer)
+(post get request parsed with jsonparser and create serializer instance and save serializer send json response of 201 created)
+
+Task_details
+(get a task from pk from params and .objects.get(pk = pk) use serializer and send json response)
+(put -> get task fro  request and parse it with jsonparser use serializer and save the serializer send json response ok)
+(delete-> get task by id and use obj.delete() to delete the object)
+
+'''
+
+
 from django.shortcuts import render
 from tasks.models import Task
 from tasks.serializer import TaskSerializer

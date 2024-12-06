@@ -1,3 +1,13 @@
+'''
+Created by -> Shivam Devaser
+on - > 5-12-2024
+
+created model Task with fields->
+titel(CharField)
+description(TextField)
+completed(BooleanField)
+created_at(auto field of date and time)
+'''
 from django.db import models
 
 # Create your models here.
